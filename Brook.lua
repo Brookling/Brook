@@ -385,7 +385,7 @@ SMODS.Joker{
                 }
             else
                 return {
-                    message = localize('k_safe_ex'),
+                    message = localize('k_nope_ex'),
                     card = card
                 }
             end
@@ -644,6 +644,7 @@ SMODS.Joker{
             local discard_count = #G.discard.cards
             for i = 1, discard_count do
                 if G.discard.cards[i].ability.pulp then
+                    G.discard.cards[i].ability.pulp = nil
                     draw_card(G.discard, G.deck, i*100/discard_count, 'up', nil, G.discard.cards[i], 0.005, i%2==0, nil, math.max((21-i)/20,0.7))
                 end
             end
