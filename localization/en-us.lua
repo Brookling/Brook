@@ -142,15 +142,35 @@ return {
                     "Snowlight, 280chan,",
                     "Seastar and 22461",
                     " ",
-                    "Click to view the {C:blue}wiki{} page：",
+                    "Click to view {C:blue}wiki{} page:",
                     "{C:attention}https://balatromods.miraheze.org/wiki/Brook{}",
                 }
-            }
+            },
+            About={
+                name = "About",
+                text = {
+                    "Hey Friends! I'm Brookling.",
+                    " ",
+                    "Since the release of Balatro in {C:attention}February 2024{}, I've been playing this game and absolutely ",
+                    "love it. These days I mainly focus on {C:money}Gold stake{} win streaks, with a PB of {C:red}18{}.",
+                    " ",
+                    "{C:attention}From February to August 2025{}, I dedicated myself to creating a {C:attention}high-quality{},",
+                    "{C:attention}vanilla-like{} mod, drawing a lot of inspiration from many existing mods and feeling deeply",
+                    "grateful to their creators.",
+                    " ",
+                    "I designed {C:red}15{} new Jokers, each with unique abilities across a wide range of types, putting",
+                    "a lot of effort into balance, fun, and innovation -- and illustrating all the cards myself.",
+                    " ",
+                    "{C:green}Special thanks{} to Baimao for coding this project, and to all the friends who supported it. ",
+                    "{C:dark_edition}Brook{} is now released and ready to play!",
+                }
+            },
         },
     },
     misc={
         dictionary={
-            b_open_brook_wiki="Opens in browser",
+            b_open_brook_wiki="Opens in Browser",
+            b_brookling_about="About",
             k_d4c="Cheap!",
             k_free_reroll_1="free",
             k_free_reroll_2="Rerolls",

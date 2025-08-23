@@ -2,7 +2,7 @@
 --- MOD_NAME: Brook
 --- MOD_ID: Brook
 --- MOD_AUTHOR: [Brookling BaiMao]
---- MOD_DESCRIPTION: Adds 15 vanilla-like Jokers
+--- MOD_DESCRIPTION: Add 15 vanilla-like Jokers
 --- BADGE_COLOUR: EACCD2
 --- PREFIX: broo
 --- VERSION: 1.0.2
@@ -25,6 +25,21 @@ end
 
 G.FUNCS.open_brook_wiki = function(e)
     love.system.openURL("https://balatromods.miraheze.org/wiki/Brook")
+end
+
+SMODS.current_mod.extra_tabs = function()
+    local nodes = {}
+    localize{type = 'descriptions', key = 'About', set = 'Mod', nodes = nodes, scale = 1.2, text_colour = G.C.WHITE, shadow = true}
+    nodes = desc_from_rows(nodes)
+    nodes.config.colour = G.C.CLEAR
+    return {
+        label = localize('b_brookling_about'),
+        tab_definition_function = function()
+            return {n=G.UIT.ROOT, config = {emboss = 0.05, minh = 6, r = 0.1, minw = 6, align = "cm", padding = 0.2, colour = G.C.BLACK}, nodes={
+                nodes
+            }}
+        end
+    }
 end
 
 local function find_highest_suit()

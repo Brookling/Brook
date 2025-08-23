@@ -140,12 +140,31 @@ return {
                     "点击浏览{C:blue}wiki{}页面：",
                     "{C:attention}https://balatromods.miraheze.org/wiki/Brook{}",
                 }
-            }
+            },
+            About={
+                name = "About",
+                text = {
+                    "朋友们好！我是小水怪。",
+                    " ",
+                    "自{C:attention}2024年2月{}小丑牌发售以来，我一直在玩这款游戏。",
+                    "我非常喜欢它。我主要玩{C:money}金注{}连胜，最好成绩是{C:red}18{}连胜。",
+                    " ",
+                    "{C:attention}从2025年2月到8月{}，我一直致力于制作一款{C:attention}高质量的{}",
+                    "{C:attention}香草{}模组。我从很多已有的模组汲取了灵感，非常感谢那些创作者。",
+                    " ",
+                    "我设计了{C:red}15{}张新小丑牌，能力各不相同，类型非常丰富。我花了",
+                    "很多精力在{C:attention}平衡性{}、{C:red}趣味性{}和{C:blue}创新性{}上，并绘制了卡面。",
+                    " ",
+                    "{C:green}特别感谢{}白猫早睡为本项目编写代码，也感谢所有支持的朋友。",
+                    "{C:dark_edition}Brook{}现已发布，欢迎试玩。",
+                }
+            },
         },
     },
     misc={
         dictionary={
             b_open_brook_wiki="在浏览器中打开",
+            b_brookling_about="关于",
             k_d4c="容易！",
             k_free_reroll_1="次",
             k_free_reroll_2="免费重掷",
