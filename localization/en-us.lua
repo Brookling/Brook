@@ -66,7 +66,7 @@ return {
             j_broo_unease={
                 name = 'Unease',
                 text = {
-                    "{C:mult}+#1#{} base Mult",
+                    "{C:mult}+#1#{} Base Mult",
                 },
             },
             j_broo_alien={
@@ -78,7 +78,7 @@ return {
             j_broo_needle_thread={
                 name = 'Needle Thread',
                 text = {
-                    "Round current {C:blue}chips{} up",
+                    "Round current {C:blue}Chips{} up",
                     "to the next hundred",
                     "{C:inactive}(ex: 25 -> 100)",
                 },
