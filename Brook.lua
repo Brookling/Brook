@@ -385,7 +385,7 @@ SMODS.Joker{
                 }
             else
                 return {
-                    message = localize('k_safe_ex'),
+                    message = localize('k_nope_ex'),
                     card = card
                 }
             end
