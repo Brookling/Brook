@@ -32,7 +32,7 @@ function G.FUNCS.brook_github(e)
 end
 
 function G.FUNCS.brook_discord(e)
-  love.system.openURL("https://discord.com/channels/1116389027176787968/1409095071139237969")
+  love.system.openURL("https://discord.com/channels/1116389027176787968/1409110851608379422")
 end
 
 SMODS.current_mod.extra_tabs = function()
