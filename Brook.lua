@@ -5,7 +5,7 @@
 --- MOD_DESCRIPTION: Add 15 vanilla-like Jokers
 --- BADGE_COLOUR: EACCD2
 --- PREFIX: broo
---- VERSION: 1.0.2
+--- VERSION: 1.0.0
 ----------------------------------------------
 ------------MOD CODE -------------------------
 
@@ -27,16 +27,34 @@ G.FUNCS.open_brook_wiki = function(e)
     love.system.openURL("https://balatromods.miraheze.org/wiki/Brook")
 end
 
+function G.FUNCS.brook_github(e)
+    love.system.openURL("https://github.com/Brookling/Brook")
+end
+
+function G.FUNCS.brook_discord(e)
+  love.system.openURL("https://discord.com/channels/1116389027176787968/1409095071139237969")
+end
+
 SMODS.current_mod.extra_tabs = function()
     local nodes = {}
     localize{type = 'descriptions', key = 'About', set = 'Mod', nodes = nodes, scale = 1.2, text_colour = G.C.WHITE, shadow = true}
     nodes = desc_from_rows(nodes)
     nodes.config.colour = G.C.CLEAR
+    local related_pages = {n=G.UIT.R, config={align = "cm", padding = 0.05}, nodes={
+        {n=G.UIT.C, config={align = "cm", padding = 0}, nodes={
+            UIBox_button{ label = {localize('b_brook_github')}, button = "brook_github", minw = 3.6},
+        }},
+        {n=G.UIT.C, config={align = "cm", padding = 0, minw = 0.2}, nodes={}},
+        {n=G.UIT.C, config={align = "cm", padding = 0}, nodes={
+            UIBox_button{ label = {localize('b_brook_discord')}, button = "brook_discord", colour = HEX("9656ce"), minw = 3.6},
+        }},
+    }}
     return {
         label = localize('b_brookling_about'),
         tab_definition_function = function()
             return {n=G.UIT.ROOT, config = {emboss = 0.05, minh = 6, r = 0.1, minw = 6, align = "cm", padding = 0.2, colour = G.C.BLACK}, nodes={
-                nodes
+                nodes,
+                related_pages,
             }}
         end
     }
