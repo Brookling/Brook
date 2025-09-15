@@ -658,7 +658,14 @@ SMODS.Joker{
         return { vars = {} }
     end,
     remove_from_deck = function(self, card, from_debuff)
-        G.E_MANAGER:add_event(Event({trigger = 'immediate', func = function()
+        local no_return = nil
+        for k, v in ipairs(G.jokers.cards) do
+            if v.ability.name == 'Pulp Fiction' and not v.debuff and v ~= card then
+                no_return = true
+                break
+            end
+        end
+        if not no_return then
             local discard_count = #G.discard.cards
             for i = 1, discard_count do
                 if G.discard.cards[i].ability.pulp then
@@ -666,7 +673,7 @@ SMODS.Joker{
                     draw_card(G.discard, G.deck, i*100/discard_count, 'up', nil, G.discard.cards[i], 0.005, i%2==0, nil, math.max((21-i)/20,0.7))
                 end
             end
-        return true end}))
+        end
     end,
     calculate = function(self, card, context)
     end
