@@ -682,7 +682,7 @@ SMODS.Joker{
 SMODS.Joker{
     key = 'parrot',
     name = 'Parrot',
-    rarity = 2,
+    rarity = 3,
     cost = 7,
     unlocked = true,
     discovered = true,
