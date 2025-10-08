@@ -5,7 +5,7 @@
 --- MOD_DESCRIPTION: Add 15 vanilla-like Jokers
 --- BADGE_COLOUR: EACCD2
 --- PREFIX: broo
---- VERSION: 1.0.0
+--- VERSION: 1.0.1
 ----------------------------------------------
 ------------MOD CODE -------------------------
 
