@@ -33,5 +33,5 @@ __Snowlight, 280chan, Seastar and 22461__
 __[Neato Jokers](https://github.com/neatoqueen/NeatoJokers)__  
 __[Plantain](https://github.com/IcebergLettuce0/Plantain)__  
 __[Extra Credit](https://github.com/GuilloryCraft/ExtraCredit)__  
-__[Prism](https://github.com/blazingulag/Prism)__  
+__[KCVanilla](https://github.com/kcgidw/kcvanilla)__  
 __[Partner](https://github.com/Icecanno/Partner-API)__
