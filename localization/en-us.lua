@@ -22,10 +22,10 @@ return {
             j_broo_d4c={
                 name = 'D4C',
                 text = {
-                    "Add {C:dark_edition}Foil{} edition",
-                    "to a random {C:attention}Joker",
-                    "at the end of the shop",
-                    "{C:inactive}(Excluding D4C)",
+                    "Add {C:dark_edition}Foil{} edition to a",
+                    "random {C:attention}Joker{} at end of shop",
+                    "D4C excluded",
+                    "Earn no Blind {C:attention}reward money",
                 },
             },
             j_broo_christmas_card={

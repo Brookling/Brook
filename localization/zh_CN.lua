@@ -24,7 +24,8 @@ return {
                     "离开商店时",
                     "给一张随机{C:attention}小丑牌",
                     "添加{C:dark_edition}闪箔{}版本",
-                    "{C:inactive}（不包括D4C）",
+                    "不包括D4C",
+                    "不再获得盲注{C:attention}奖励金",
                 },
             },
             j_broo_christmas_card={

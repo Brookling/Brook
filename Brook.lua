@@ -1,7 +1,7 @@
 --- STEAMODDED HEADER
 --- MOD_NAME: Brook
 --- MOD_ID: Brook
---- MOD_AUTHOR: [Brookling BaiMao]
+--- MOD_AUTHOR: [Brookling, BaiMao]
 --- MOD_DESCRIPTION: Add 15 vanilla-like Jokers
 --- BADGE_COLOUR: EACCD2
 --- PREFIX: broo
@@ -316,6 +316,29 @@ SMODS.Joker{
     loc_vars = function(self, info_queue, card)
         info_queue[#info_queue+1] = G.P_CENTERS.e_foil
         return { vars = {} }
+    end,
+    add_to_deck = function(self, card, from_debuff)
+        G.GAME.modifiers.no_blind_reward = G.GAME.modifiers.no_blind_reward or {}
+        if G.GAME.modifiers.no_blind_reward_temp then else
+            G.GAME.modifiers.no_blind_reward_temp = {}
+            for k, v in pairs(G.GAME.modifiers.no_blind_reward) do
+                G.GAME.modifiers.no_blind_reward_temp[k] = v
+            end
+            G.GAME.modifiers.no_blind_reward.Small = true
+            G.GAME.modifiers.no_blind_reward.Big = true
+            G.GAME.modifiers.no_blind_reward.Boss = true
+            if G.GAME.blind then G.GAME.current_round.dollars_to_be_earned = (''); G.GAME.blind.dollars = 0 end
+        end
+    end,
+    remove_from_deck = function(self, card, from_debuff)
+        if next(find_joker("D4C")) then else
+            G.GAME.modifiers.no_blind_reward = G.GAME.modifiers.no_blind_reward_temp
+            G.GAME.modifiers.no_blind_reward_temp = nil
+            if G.GAME.blind and not G.GAME.modifiers.no_blind_reward[G.GAME.blind:get_type()] and G.GAME.round_resets.blind.dollars ~= 0 then
+                G.GAME.blind.dollars = G.GAME.round_resets.blind.dollars
+                G.GAME.current_round.dollars_to_be_earned = (string.rep(localize('$'), G.GAME.blind.dollars)..'')
+            end
+        end
     end,
     calculate = function(self, card, context)
         if context.ending_shop and next(card.ability.extra.eligible_d4c_jokers) then
