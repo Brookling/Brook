@@ -1,4 +1,4 @@
-![logo](content/logo.png)  
+<img src="content/thumbnail.png" width="600">
 
 A __vanilla-like__ Balatro Mod that adds 15 new Jokers.  
 Requires [Steamodded](https://github.com/Steamodded/smods) and [Lovely](https://github.com/ethangreen-dev/lovely-injector).  
