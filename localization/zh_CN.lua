@@ -9,32 +9,30 @@ return {
                     "每次出牌后都改变牌型",
                 },
             },
-            j_broo_ink={
-                name = '墨水',
-                text = {
-                    "在选择{C:attention}盲注{}时",
-                    "生成一张与牌组中",
-                    "数量{C:attention}最多{}的花色",
-                    "对应的{C:tarot}塔罗牌{}",
-                },
-            },
             j_broo_d4c={
                 name = 'D4C',
                 text = {
                     "离开商店时",
                     "给一张随机{C:attention}小丑牌",
                     "添加{C:dark_edition}闪箔{}版本",
-                    "不包括D4C",
-                    "不再获得盲注{C:attention}奖励金",
+                    "不再赚取{C:attention}利息{}",
                 },
             },
-            j_broo_christmas_card={
-                name = '新年贺卡',
+            j_broo_ink={
+                name = '油墨',
                 text = {
-                    "每个商店额外",
-                    "上架一个",
-                    "{C:attention}超级小丑包",
-                    "或{C:attention}超级幻灵包",
+                    "在选择{C:attention}盲注{}时",
+                    "生成一张与牌组中",
+                    "数量{C:attention}最多{}的花色",
+                    "对应的{C:tarot}塔罗牌{}",
+                    "{C:inactive}（必须有空位）",
+                },
+            },
+            j_broo_occultist={
+                name = '神秘学家',
+                text = {
+                    "交换商店中{C:attention}标准包{}",
+                    "与{C:spectral}幻灵包{}的出现频率",
                 },
             },
             j_broo_trace={
@@ -83,9 +81,9 @@ return {
                 },
             },
             j_broo_dancer={
-                name = '舞者',
+                name = '舞姬',
                 text = {
-                    "若小丑牌栏位未满",
+                    "若小丑牌槽位未满",
                     "重新触发所有{C:attention}游戏牌",
                 },
             },
@@ -135,7 +133,7 @@ return {
                     "白猫早睡",
                     " ",
                     "{C:green}感谢{}",
-                    "柔雪似水，彼君不触",
+                    "柔雪似水，第八大洋，彼君不触，",
                     "海星只会玩模组，224六妖",
                     " ",
                     "点击浏览{C:blue}wiki{}页面：",
@@ -172,7 +170,7 @@ return {
             k_free_reroll_1="次",
             k_free_reroll_2="免费重掷",
             k_plus_tag="+1标签",
-            k_burnt_out="点燃！",
+            k_burnt_out="烧完了！",
             k_rewind="倒流！",
         },
     },

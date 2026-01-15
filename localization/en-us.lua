@@ -10,31 +10,30 @@ return {
                     "after each play",
                 },
             },
-            j_broo_ink={
-                name = 'Ink',
-                text = {
-                    "When {C:attention}Blind{} is selected,",
-                    "create a {C:tarot}Tarot{} card",
-                    "matching the {C:attention}most common{}",
-                    "suit in your full deck",
-                },
-            },
             j_broo_d4c={
                 name = 'D4C',
                 text = {
                     "Add {C:dark_edition}Foil{} edition to a",
                     "random {C:attention}Joker{} at end of shop",
-                    "D4C excluded",
-                    "Earn no Blind {C:attention}reward money",
+                    "Earn no {C:attention}Interest{}",
                 },
             },
-            j_broo_christmas_card={
-                name = 'Christmas Card',
+            j_broo_ink={
+                name = 'Printing Ink',
                 text = {
-                    "Each shop stocks",
-                    "an additional",
-                    "{C:attention}Mega Buffoon Pack{}",
-                    "or {C:attention}Mega Spectral Pack",
+                    "When {C:attention}Blind{} is selected,",
+                    "create a {C:tarot}Tarot{} card",
+                    "matching the {C:attention}most common{}",
+                    "suit in your full deck",
+                    "{C:inactive}(Must have room)",
+                },
+            },
+            j_broo_occultist={
+                name = 'Occultist',
+                text = {
+                    "Swap the appearance rates",
+                    "of {C:attention}Standard Pack{} and",
+                    "{C:spectral}Spectral Pack{} in the shop",
                 },
             },
             j_broo_trace={
@@ -112,7 +111,7 @@ return {
                 name = 'Moon Rabbit',
                 text = {
                     "This Joker gains {X:mult,C:white} X#4# {} Mult",
-                    "every {C:money}$#1# {C:inactive}[#2#]{} of",
+                    "for every {C:money}$#1# {C:inactive}[#2#]{} of",
                     "{C:attention}interest{} earned",
                     "{C:inactive}(Currently {X:mult,C:white} X#3# {C:inactive} Mult)",
                 },
@@ -139,8 +138,8 @@ return {
                     "Baimao",
                     " ",
                     "{C:green}Thanks to{}",
-                    "Snowlight, 280chan,",
-                    "Seastar and 22461",
+                    "Snowlight, mleaf233,",
+                    "280chan, Seastar and 22461",
                     " ",
                     "Click to view {C:blue}wiki{} page:",
                     "{C:attention}https://balatromods.miraheze.org/wiki/Brook{}",
