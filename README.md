@@ -3,6 +3,7 @@
 A __vanilla-like__ Balatro Mod that adds 15 new Jokers.  
 Requires [Steamodded](https://github.com/Steamodded/smods) and [Lovely](https://github.com/ethangreen-dev/lovely-injector).  
 
+Click to view the [wiki page](https://balatromods.miraheze.org/wiki/Brook).  
 Bugs? Feedback? Share them here on [Discord](https://discord.com/channels/1116389027176787968/1409110851608379422).
 
 ## ABOUT
