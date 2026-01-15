@@ -27,7 +27,7 @@ _Brook_ is now released and ready to play!
 ### CODING  
 ![Ba](content/Baimao.png) __Baimao__ 
 ### THANKS TO  
-__Snowlight, 280chan, Seastar and 22461__  
+__Snowlight, mleaf233, 280chan, Seastar and 22461__  
 
 ## RECOMMENDED MODS
 __[Neato Jokers](https://github.com/neatoqueen/NeatoJokers)__  
