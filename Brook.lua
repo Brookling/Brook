@@ -794,7 +794,7 @@ SMODS.Joker {
 
 SMODS.Joker {
     key = 'needle_thread',
-    name = 'Needle_Thread',
+    name = 'Needle & Thread',
     rarity = 1,
     cost = 5,
     unlocked = true,

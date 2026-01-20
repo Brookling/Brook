@@ -75,7 +75,7 @@ return {
                 },
             },
             j_broo_needle_thread={
-                name = 'Needle Thread',
+                name = 'Needle & Thread',
                 text = {
                     "Round current {C:blue}Chips{} up",
                     "to the next hundred",
@@ -176,7 +176,7 @@ return {
             k_free_reroll_1="free",
             k_free_reroll_2="Rerolls",
             k_plus_tag="+1 Tag",
-            k_burnt_out="Burnt Out!",
+            k_burnt_out="Burnt Up!",
             k_rewind="Rewind!",
         },
     },
