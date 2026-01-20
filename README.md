@@ -1,8 +1,9 @@
-![logo](content/logo.png)  
+<img src="content/thumbnail.png" width="600">
 
 A __vanilla-like__ Balatro Mod that adds 15 new Jokers.  
 Requires [Steamodded](https://github.com/Steamodded/smods) and [Lovely](https://github.com/ethangreen-dev/lovely-injector).  
 
+Click to view the [wiki page](https://balatromods.miraheze.org/wiki/Brook).  
 Bugs? Feedback? Share them here on [Discord](https://discord.com/channels/1116389027176787968/1409110851608379422).
 
 ## ABOUT
@@ -27,7 +28,7 @@ _Brook_ is now released and ready to play!
 ### CODING  
 ![Ba](content/Baimao.png) __Baimao__ 
 ### THANKS TO  
-__Snowlight, 280chan, Seastar and 22461__  
+__Snowlight, mleaf233, 280chan, Seastar and 22461__  
 
 ## RECOMMENDED MODS
 __[Neato Jokers](https://github.com/neatoqueen/NeatoJokers)__  
