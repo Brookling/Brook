@@ -5,7 +5,7 @@
 --- MOD_DESCRIPTION: Add 15 vanilla-like Jokers
 --- BADGE_COLOUR: EACCD2
 --- PREFIX: broo
---- VERSION: 1.1.0
+--- VERSION: 1.2.0
 ----------------------------------------------
 ------------MOD CODE -------------------------
 
@@ -256,6 +256,13 @@ SMODS.Atlas {
     path = 'jokers.png'
 }
 
+SMODS.Atlas{
+    key = 'deck',
+    px = 71,
+    py = 95,
+    path = 'deck.png'
+}
+
 -- Occultist support: dynamically swap Standard and Spectral pack weights
 -- Cache original weights for Standard and Spectral packs
 local function get_occultist_swapped_weight(self)
@@ -362,6 +369,25 @@ function SMODS.Booster:get_weight(...)
     if booster_get_weight_ref then return booster_get_weight_ref(self, ...) end
     return self.weight or 1
 end
+
+SMODS.Back{
+    key = "brook",
+    name = "Brook Deck",
+    discovered = true,
+    unlocked = true,
+    atlas = 'deck',
+    pos = { x = 0, y = 0 },
+    config = {brook = true},
+    loc_txt = {},
+    loc_vars = function(self, info_queue, center)
+        return { vars = {} }
+    end,
+    apply = function(self)
+        if self.config.brook then
+            G.GAME.common_mod = 3/13
+        end
+    end
+}
 
 SMODS.Joker {
     key = 'stargaze',

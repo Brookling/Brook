@@ -1,6 +1,6 @@
 <img src="content/thumbnail.png" width="600">
 
-A __vanilla-like__ Balatro Mod that adds 15 new Jokers.  
+A __vanilla-like__ Balatro Mod that adds 15 new Jokers and a new deck.  
 Requires [Steamodded](https://github.com/Steamodded/smods) and [Lovely](https://github.com/ethangreen-dev/lovely-injector).  
 
 Click to view the [wiki page](https://balatromods.miraheze.org/wiki/Brook).  

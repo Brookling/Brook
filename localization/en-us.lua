@@ -1,5 +1,14 @@
 return {
     descriptions = {
+        Back = {
+            b_broo_brook={
+                name="Brook Deck",
+                text={
+                    "{C:blue}Common{} Jokers",
+                    "appear half as often",
+                },
+            },
+        },
         Joker={
             j_broo_stargaze={
                 name = 'Stargazing',

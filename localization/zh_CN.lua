@@ -1,5 +1,14 @@
 return {
     descriptions = {
+        Back = {
+            b_broo_brook={
+                name="溪流牌组",
+                text={
+                    "{C:blue}普通{}小丑",
+                    "出现频率减半",
+                },
+            },
+        },
         Joker={
             j_broo_stargaze={
                 name = '观星',
