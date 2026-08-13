@@ -72,7 +72,8 @@ return {
             j_broo_unease={
                 name = '不安感',
                 text = {
-                    "{C:mult}+#1#{}基础倍率",
+                    "将基础倍率",
+                    "设为{C:mult}#1#{}",
                 },
             },
             j_broo_alien={
@@ -93,7 +94,8 @@ return {
                 name = '舞姬',
                 text = {
                     "若小丑牌槽位未满",
-                    "重新触发所有{C:attention}游戏牌",
+                    "重新触发",
+                    "所有{C:attention}游戏牌{}",
                 },
             },
             j_broo_pulp_fiction={
@@ -109,13 +111,13 @@ return {
                 text = {
                     "回合结束时",
                     "生成一个",
-                    "{C:attention}优惠券标签",
+                    "{C:attention}优惠券标签{}",
                 },
             },
             j_broo_moon_rabbit={
                 name = '月兔',
                 text = {
-                    "每赚取{C:money}$#1#{C:inactive}[#2#]{}的{C:attention}利息",
+                    "每赚取{C:money}$#1#{C:inactive}[#2#]{}的{C:attention}利息{}",
                     "这张小丑牌获得{X:mult,C:white}X#4#{}倍率",
                     "{C:inactive}（当前为{X:mult,C:white}X#3#{C:inactive}倍率）",
                 },
@@ -125,7 +127,7 @@ return {
                 text = {
                     "在{C:attention}小盲注{}",
                     "或{C:attention}大盲注{}结束时",
-                    "底注{C:attention}-#1#{}并{S:1.1,C:red,E:2}自毁",
+                    "底注{C:attention}-#1#{}并{S:1.1,C:red,E:2}自毁{}",
                 },
             },
         },
@@ -133,7 +135,7 @@ return {
             Brook={
                 name = "Brook",
                 text = {
-                    "添加{C:red}15{}张原版风格的新小丑",
+                    "添加{C:red}15{}张原版风格的新小丑和一个新牌组",
                     " ",
                     "{C:dark_edition}设计&美术{}",
                     "小水怪",
@@ -175,12 +177,18 @@ return {
             b_brookling_about="关于",
             b_brook_github="GitHub",
             b_brook_discord="Discord",
+            brook_requires_restart="调整选项后游戏将会自动重启",
+            brook_jokers_enabled="启用小丑牌",
+            brook_decks_enabled="启用牌组",
             k_d4c="容易！",
             k_free_reroll_1="次",
             k_free_reroll_2="免费重掷",
             k_plus_tag="+1标签",
             k_burnt_out="烧完了！",
             k_rewind="倒流！",
+        },
+        v_dictionary={
+            a_specified_mult="#1#",
         },
     },
 }

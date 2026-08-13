@@ -5,11 +5,23 @@
 --- MOD_DESCRIPTION: Add 15 vanilla-like Jokers
 --- BADGE_COLOUR: EACCD2
 --- PREFIX: broo
---- VERSION: 1.2.0
+--- VERSION: 1.2.1
 ----------------------------------------------
 ------------MOD CODE -------------------------
 
 Brook = SMODS.current_mod
+
+local old_config = copy_table(Brook.config)
+
+local function should_restart()
+    for k, v in pairs(old_config) do
+        if v ~= Brook.config[k] then
+            SMODS.full_restart = 1
+            return
+        end
+    end
+    SMODS.full_restart = 0
+end
 
 Brook.description_loc_vars = function()
     return { background_colour = G.C.CLEAR, text_colour = G.C.WHITE, scale = 1.2, shadow = true }
@@ -75,6 +87,44 @@ Brook.extra_tabs = function()
                 }
             }
         end
+    }
+end
+
+Brook.config_tab = function()
+    return {
+        n = G.UIT.ROOT,
+        config = { align = 'cm', padding = 0.07, emboss = 0.05, r = 0.1, colour = G.C.BLACK, minh = 4.5, minw = 7 },
+        nodes = {
+            {
+                n = G.UIT.R,
+                config = { align = 'cm', minh = 0.6 },
+                nodes = {
+                    { n = G.UIT.T, config = { text = localize('brook_requires_restart'), colour = G.C.RED, scale = 0.4 } },
+                }
+            },
+            {
+                n = G.UIT.R,
+                nodes = {
+                    {
+                        n = G.UIT.C,
+                        nodes = {
+                            create_toggle {
+                                label = localize('brook_jokers_enabled'),
+                                ref_table = Brook.config,
+                                ref_value = 'jokers_enabled',
+                                callback = should_restart
+                            },
+                            create_toggle {
+                                label = localize('brook_decks_enabled'),
+                                ref_table = Brook.config,
+                                ref_value = 'decks_enabled',
+                                callback = should_restart
+                            },
+                        }
+                    },
+                }
+            }
+        }
     }
 end
 
@@ -370,6 +420,7 @@ function SMODS.Booster:get_weight(...)
     return self.weight or 1
 end
 
+if Brook.config.decks_enabled then
 SMODS.Back{
     key = "brook",
     name = "Brook Deck",
@@ -388,7 +439,9 @@ SMODS.Back{
         end
     end
 }
+end
 
+if Brook.config.jokers_enabled then
 SMODS.Joker {
     key = 'stargaze',
     name = 'Stargaze',
@@ -500,8 +553,8 @@ SMODS.Joker {
 SMODS.Joker {
     key = 'ink',
     name = 'Ink',
-    rarity = 2,
-    cost = 7,
+    rarity = 3,
+    cost = 8,
     unlocked = true,
     discovered = true,
     blueprint_compat = true,
@@ -711,7 +764,7 @@ SMODS.Joker {
     key = 'unease',
     name = 'Unease',
     rarity = 2,
-    cost = 8,
+    cost = 7,
     unlocked = true,
     discovered = true,
     blueprint_compat = true,
@@ -725,24 +778,15 @@ SMODS.Joker {
         return { vars = { card.ability.extra.mult_mod } }
     end,
     calculate = function(self, card, context)
-        if context.before then
-            local text = context.scoring_name
-            G.GAME.hands[text].s_mult = G.GAME.hands[text].s_mult + card.ability.extra.mult_mod
-            G.GAME.hands[text].mult = G.GAME.hands[text].mult + card.ability.extra.mult_mod
-            mult = mod_mult(G.GAME.hands[text].mult)
+        if context.initial_scoring_step then
+            mult = mod_mult(card.ability.extra.mult_mod)
             update_hand_text({ delay = 0 }, { chips = hand_chips, mult = mult })
             card_eval_status_text(context.blueprint_card or card, 'extra', nil, nil, nil,
                 {
-                    message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult_mod } },
-                    colour =
-                        G.C.MULT,
+                    message = localize { type = 'variable', key = 'a_specified_mult', vars = { card.ability.extra.mult_mod } },
+                    colour = G.C.MULT,
                     sound = 'multhit1'
                 })
-        end
-        if context.after then
-            local text = context.scoring_name
-            G.GAME.hands[text].s_mult = G.GAME.hands[text].s_mult - card.ability.extra.mult_mod
-            G.GAME.hands[text].mult = G.GAME.hands[text].mult - card.ability.extra.mult_mod
         end
     end
 }
@@ -1053,6 +1097,7 @@ SMODS.Joker {
         end
     end
 }
+end
 
 ----------------------------------------------
 ------------MOD CODE END----------------------

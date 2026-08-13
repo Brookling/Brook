@@ -22,8 +22,9 @@ return {
             j_broo_d4c={
                 name = 'D4C',
                 text = {
-                    "Add {C:dark_edition}Foil{} edition to a",
-                    "random {C:attention}Joker{} at end of shop",
+                    "Add {C:dark_edition}Foil{} edition to",
+                    "a random {C:attention}Joker{}",
+                    "at the end of the shop",
                     "Earn no {C:attention}Interest{}",
                 },
             },
@@ -40,8 +41,8 @@ return {
             j_broo_occultist={
                 name = 'Occultist',
                 text = {
-                    "Swap the appearance rates",
-                    "of {C:attention}Standard Pack{} and",
+                    "Swap the spawn rates of",
+                    "{C:attention}Standard Pack{} and",
                     "{C:spectral}Spectral Pack{} in the shop",
                 },
             },
@@ -74,7 +75,8 @@ return {
             j_broo_unease={
                 name = 'Unease',
                 text = {
-                    "{C:mult}+#1#{} Base Mult",
+                    "Set Base Mult",
+                    "to {C:mult}#1#{} ",
                 },
             },
             j_broo_alien={
@@ -138,7 +140,7 @@ return {
             Brook={
                 name = "Brook",
                 text = {
-                    "Adds {C:red}15{} new vanilla-like Jokers",
+                    "Adds {C:red}15{} new vanilla-like Jokers and a new deck",
                     " ",
                     "{C:dark_edition}Concept & Art{}",
                     "Brookling",
@@ -150,7 +152,7 @@ return {
                     "Snowlight, mleaf233,",
                     "280chan, Seastar and 22461",
                     " ",
-                    "Click to view {C:blue}wiki{} page:",
+                    "Click to view the {C:blue}wiki{} page:",
                     "{C:attention}https://balatromods.miraheze.org/wiki/Brook{}",
                 }
             },
@@ -181,12 +183,18 @@ return {
             b_brookling_about="About",
             b_brook_github="GitHub",
             b_brook_discord="Discord",
+            brook_requires_restart="The game will restart automatically",
+            brook_jokers_enabled="Enable Jokers",
+            brook_decks_enabled="Enable Decks",
             k_d4c="Cheap!",
             k_free_reroll_1="free",
             k_free_reroll_2="Rerolls",
             k_plus_tag="+1 Tag",
             k_burnt_out="Burnt Up!",
             k_rewind="Rewind!",
+        },
+        v_dictionary={
+            a_specified_mult="#1#",
         },
     },
 }
