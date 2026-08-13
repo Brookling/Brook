@@ -145,7 +145,7 @@ return {
                     " ",
                     "{C:green}感谢{}",
                     "柔雪似水，第八大洋，彼君不触，",
-                    "海星只会玩模组，224六妖",
+                    "海星只会玩模组，224六妖，Marffe",
                     " ",
                     "点击浏览{C:blue}wiki{}页面：",
                     "{C:attention}https://balatromods.miraheze.org/wiki/Brook{}",
